@@ -69,7 +69,7 @@ class Company extends \yii\db\ActiveRecord
 
         if(is_array($ids)) {
             foreach ($ids as $id) {
-                $model = self::findOne($id);
+                $model = Tag::findOne($id);
                 $this->link($linkName, $model);
             }
         }

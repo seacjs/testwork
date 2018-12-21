@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Company;
+use app\models\Tag;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -62,7 +64,12 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $this->layout = 'land';
-        return $this->render('index');
+        $tags = Tag::find()->with('companies')->all();
+        $allCompanies = Company::find()->all();
+        return $this->render('index',[
+            'allCompanies' => $allCompanies,
+            'tags' => $tags
+        ]);
     }
 
     /**

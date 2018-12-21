@@ -21,154 +21,41 @@ $this->title = 'My Yii Application';
                 <div class="title">выберите ритейлеров, на переговоры с которыми вы хотели бы попасть</div>
                 <div class="tabs">
                     <ul class="tabs__caption check__caption-items">
-                        <li class="check__caption-item item--fashion active"> <span>Fashion</span></li>
-                        <li class="check__caption-item item--diamond"> <span>Ювелирные изделия и аксессуары</span></li>
-                        <li class="check__caption-item item--abc-block"> <span>Товары для детей</span></li>
-                        <li class="check__caption-item item--shopping-cart"> <span>Fmcg, алкоголь</span></li>
-                        <li class="check__caption-item item--chef"> <span>Food</span></li>
-                        <li class="check__caption-item item--movie-tickets"> <span>Развлечения</span></li>
-                        <li class="check__caption-item item--cosmetics"> <span>Красота и здоровье</span></li>
-                        <li class="check__caption-item item--mobile-phone"> <span>Бтиэ, мобильные устройства</span></li>
-                        <li class="check__caption-item item--hammer-and-wrench"> <span>Diy, household, мебель</span></li>
-                        <li class="check__caption-item item--antidepressants"> <span>Аптеки и оптики</span></li>
-                        <li class="check__caption-item item--artist"> <span>Хобби и канцтовары</span></li>
-                        <li class="check__caption-item item--information"> <span>Услуги</span></li>
+                        <li class="check__caption-item active">
+                            <span>Все</span>
+                        </li>
+                        <?php foreach($tags as $tag):?>
+                            <li class="check__caption-item item--fashion">
+                                <span><?=$tag->name?></span>
+                            </li>
+                        <?php endforeach ?>
                     </ul>
                     <div class="double-arrows">
                         <div class="double-arrows--wrap"></div>
                     </div>
                     <div class="check__content-items checkbox">
+
                         <div class="tabs__content active check__content-item">
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="familia" value="familia" id="familia">
-                                <label for="familia">Familia<a href="https://www.google.com/" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="tomTailor" value="tomTailor" id="tomTailor">
-                                <label for="tomTailor">Tom Tailor<a href="https://www.google.com/" target="_blank" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="conceptClub" value="conceptClub" id="conceptClub">
-                                <label for="conceptClub">Concept Club<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="kanzler" value="kanzler" id="kanzler">
-                                <label for="kanzler">KANZLER<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="jackWolfskin" value="jackWolfskin" id="jackWolfskin">
-                                <label for="jackWolfskin">Jack Wolfskin<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="antiga" value="antiga" id="antiga">
-                                <label for="antiga">Антига<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="play34" value="play34" id="play34">
-                                <label for="play34">34PLAY<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="snowQueen" value="ralfRinger" id="ralfRinger">
-                                <label for="ralfRinger">Ralf Ringer<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="snowQueen" value="snowQueen" id="snowQueen">
-                                <label for="snowQueen">Снежная королева<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="footwearFamily" value="footwearFamily" id="footwearFamily">
-                                <label for="footwearFamily">Обувь для всей семьи<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="shop21" value="shop21" id="shop21">
-                                <label for="shop21">21Shop<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="shoes21v" value="shoes21v" id="shoes21v">
-                                <label for="shoes21v">Обувь XXI века<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="baon" value="baon" id="baon">
-                                <label for="baon">BAON<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="charuel" value="charuel" id="charuel">
-                                <label for="charuel">Charuel<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="euroShoes" value="euroShoes" id="euroShoes">
-                                <label for="euroShoes">ЕвроОбувь<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="zenden" value="zenden" id="zenden">
-                                <label for="zenden">Zenden<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="melonFashionGroup" value="melonFashionGroup" id="melonFashionGroup">
-                                <label for="melonFashionGroup">Melon Fashion Group<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="mascotte" value="mascotte" id="mascotte">
-                                <label for="mascotte">Mascotte<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="incanto" value="incanto" id="incanto">
-                                <label for="incanto">Incanto<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="thomasMunz" value="thomasMunz" id="thomasMunz">
-                                <label for="thomasMunz">THOMAS MUNZ<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="alef" value="alef" id="alef">
-                                <label for="alef">Алеф<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="elis" value="elis" id="elis">
-                                <label for="elis">Elis<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="griol" value="griol" id="griol">
-                                <label for="griol">Griol<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="shoesTofa" value="shoesTofa" id="shoesTofa">
-                                <label for="shoesTofa">Дом обуви ТОФА<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="alfavit" value="alfavit" id="alfavit">
-                                <label for="alfavit">АЛФАВИТ<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="kari" value="kari" id="kari">
-                                <label for="kari">Kari<a href="#" class="adress">companywebsite.com</a></label>
-                            </div>
+                            <?php foreach($allCompanies as $company):?>
+                                <div class="checkbox__item">
+                                    <input type="checkbox" name="company_id" value="<?=$company->id?>" id="<?=$company->id?>">
+                                    <label for="<?=$company->id?>"><?=$company->name?><a href="<?=$company->site?>" class="adress"><?=$company->site?></a></label>
+                                </div>
+                            <?php endforeach ?>
                         </div>
-                        <div class="tabs__content check__content-item">
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="familia2" value="familia2" id="familia2">
-                                <label for="familia2">Familia2<a href="https://www.google.com/" class="adress">companywebsite.com</a></label>
+
+                        <?php foreach($tags as $tag):?>
+                            <div class="tabs__content check__content-item">
+                                <?php foreach($tag->companies as $company):?>
+                                <div class="checkbox__item">
+                                    <input type="checkbox" name="company_id" value="<?=$company->id?>" id="<?=$tag->id.'-'.$company->id?>">
+                                    <label for="<?=$tag->id.'-'.$company->id?>"><?=$company->name?><a href="<?=$company->site?>" class="adress"><?=$company->site?></a></label>
+                                </div>
+                                <?php endforeach ?>
                             </div>
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="familia22" value="familia22" id="familia22">
-                                <label for="familia22">Familia22<a href="https://www.google.com/" class="adress">companywebsite.com</a></label>
-                            </div>
-                        </div>
-                        <div class="tabs__content check__content-item">
-                            <div class="checkbox__item">
-                                <input type="checkbox" name="familia3" value="familia3" id="familia3">
-                                <label for="familia3">Familia3<a href="https://www.google.com/" class="adress">companywebsite.com</a></label>
-                            </div>
-                        </div>
-                        <div class="tabs__content check__content-item">4</div>
-                        <div class="tabs__content check__content-item">5</div>
-                        <div class="tabs__content check__content-item">6</div>
-                        <div class="tabs__content check__content-item">7</div>
-                        <div class="tabs__content check__content-item">8</div>
-                        <div class="tabs__content check__content-item">9</div>
-                        <div class="tabs__content check__content-item">10</div>
-                        <div class="tabs__content check__content-item">11</div>
-                        <div class="tabs__content check__content-item">12</div>
+                        <?php endforeach ?>
+
+                   
                     </div>
                 </div>
                 <button class="btn btn--transparent none-desctop">Cохранить список</button>
